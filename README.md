@@ -48,7 +48,7 @@ There are 3 exported functions:
 
 - `info(bytes)` - synchronous, use bytes to get as much info as possible
 - `infoFetch(url)` - asynchronous, calls fetch to download very little data, and gets info
-- `infoFetchNoCors(url)` - asynchronous, Similar to `infoFetch`, but only for browser. It will get less info, and only supports images that your browser supports, but it can get height/width even when CORS would stop you. [Here]() is an example usage.
+- `infoFetchNoCors(url)` - asynchronous, Similar to `infoFetch`, but only for browser. It will get less info, and only supports images that your browser supports, but it can get height/width even when CORS would stop you. [Here](https://codepen.io/konsumer/pen/oNaazaP?editors=1010) is an example usage.
 
 ### current nodejs / bun
 
