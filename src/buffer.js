@@ -27,13 +27,13 @@ export function readInt16LE (buffer, offset) {
 
 export const readUInt8 = (buffer, offset) => buffer[offset >>> 0]
 
+const readers = { readUInt16BE, readUInt16LE, readUInt32BE, readUInt32LE }
+
 export function readUInt (buffer, bits, offset, isBigEndian) {
   offset = offset || 0
   const endian = isBigEndian ? 'BE' : 'LE'
   const methodName = ('readUInt' + bits + endian)
-  console.log(methodName)
-  return 0
-  // return buffer[methodName].call(buffer, offset)
+  return readers[methodName](buffer, offset)
 }
 
 export const toString = (buf, start, end) => String.fromCharCode(...buf.slice(start, end))
