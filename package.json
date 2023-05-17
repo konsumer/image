@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "description": "Use the minimum amount of data to get info about an image",
   "type": "module",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "require": "/dist/index.cjs",
+    "default": "./dist/index.mjs"
+  },
   "sideEffects": false,
   "scripts": {
     "test": "vitest run --globals --reporter verbose",

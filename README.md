@@ -82,6 +82,8 @@ console.log(await infoFetch('https://placekitten.com/200/200'))
 </script>
 ```
 
+You can see an example [here](https://codepen.io/konsumer/pen/gOBBYgP?editors=1000).
+
 ## TODO
 
 - I need to clean up & normalize the data, and get more info about every format.
