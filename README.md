@@ -25,10 +25,11 @@ These image-types are supported:
 ## Features
 
 
-- You are not locked into nodejs or the browser or anyhting. This can be used in many environments (node, browser, deno, bun, Cloudflare workers, etc.)
+- You are not locked into nodejs or the browser or anything. This can be used in many environments (node, browser, deno, bun, Cloudflare workers, etc.)
 - Grabs the smallest amount of bytes from an image as possible, and get the most info possible. This means it's fast, light, and doesn't take a lot of RAM. 1 byte is enough to basically detect format. 20 bytes is enough to get height/width, color information, and more.
-- No external dependencies. Just add the single file to your project and use it.
-- It works with all kinds of things, like `Buffer`, `ArrayBuffer`, `Uint8Array`, a plain string or array of integers.
+- No external dependencies. Just add [the single file](https://cdn.jsdelivr.net/npm/@konsumer/image/dist/index.mjs) to your project and use it.
+- Published as [ESM](https://cdn.jsdelivr.net/npm/@konsumer/image/dist/index.mjs) and [CommonJS](https://cdn.jsdelivr.net/npm/@konsumer/image/dist/index.cjs) module for easy use, everywhere.
+- It works with all kinds of things, like `Buffer`, `ArrayBuffer`, `Uint8Array`, or any array of unsigned integers (representing bytes.)
 - Use it with `fetch` or your favorite HTTP library.
 
 
