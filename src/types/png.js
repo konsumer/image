@@ -30,25 +30,6 @@ export function getPNGChunks (imageData, startAddress = 0) {
   return chunks
 }
 
-// get palette from PNG
-function getPNGPalette (chunks) {
-  const palette = []
-
-  const chunk = chunks.find(c => c.type === 'PLTE')
-  if (chunk) {
-    for (let b = 0; b < chunk.length; b += 4) {
-      palette.push({
-        r: readUInt8(chunk.data, b),
-        g: readUInt8(chunk.data, b + 1),
-        b: readUInt8(chunk.data, b + 2),
-        a: readUInt8(chunk.data, b + 3)
-      })
-    }
-  }
-
-  return palette
-}
-
 export const PNG = {
   validate (buffer) {
     if (pngSignature === toString(buffer, 1, 8)) {
@@ -71,7 +52,7 @@ export const PNG = {
     const out = {}
     out.width = readUInt32BE(ihdr, 0)
     out.height = readUInt32BE(ihdr, 4)
-    out.depth = readUInt8(ihdr, 8)
+    out.bitDepth = readUInt8(ihdr, 8)
     out.colorType = readUInt8(ihdr, 9)
     out.compressionMethod = readUInt8(ihdr, 10)
     out.filterMethod = readUInt8(ihdr, 11)

@@ -3,6 +3,16 @@ import detector from './detector.js'
 
 // get info about an image
 export function info (buffer) {
+  // handle strings
+  if (typeof buffer === 'string') {
+    buffer = new TextEncoder().encode(buffer)
+  }
+
+  // handle plain arrays
+  if (!buffer.buffer) {
+    buffer = new Uint8Array(buffer)
+  }
+
   const type = detector(buffer)
 
   let i = {}

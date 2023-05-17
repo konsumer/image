@@ -92,6 +92,7 @@ You can see a demo [here](https://codepen.io/konsumer/pen/gOBBYgP?editors=1000).
 ## TODO
 
 - I need to clean up & normalize the data, and get more info about every format.
+- Make a top-level `DataView` and use it for everything (similar to Buffer, no buffer utils needed.) See jpeg for example.
 
 
 ## Thanks

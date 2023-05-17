@@ -14,9 +14,9 @@ exports[`remote jpg 1`] = `
 exports[`remote png 1`] = `
 {
   "alpha": true,
+  "bitDepth": 8,
   "colorType": 6,
   "compressionMethod": 0,
-  "depth": 8,
   "filterMethod": 0,
   "height": 170,
   "interlaceMethod": 0,
@@ -39,9 +39,9 @@ exports[`sus.jpg 1`] = `
 exports[`sus-palette-a.png 1`] = `
 {
   "alpha": true,
+  "bitDepth": 8,
   "colorType": 3,
   "compressionMethod": 0,
-  "depth": 8,
   "filterMethod": 0,
   "height": 1024,
   "interlaceMethod": 0,
@@ -53,9 +53,9 @@ exports[`sus-palette-a.png 1`] = `
 exports[`sus-palette-no_a.png 1`] = `
 {
   "alpha": false,
+  "bitDepth": 8,
   "colorType": 3,
   "compressionMethod": 0,
-  "depth": 8,
   "filterMethod": 0,
   "height": 1024,
   "interlaceMethod": 0,
@@ -67,9 +67,9 @@ exports[`sus-palette-no_a.png 1`] = `
 exports[`sus-rgb-a.png 1`] = `
 {
   "alpha": true,
+  "bitDepth": 16,
   "colorType": 6,
   "compressionMethod": 0,
-  "depth": 16,
   "filterMethod": 0,
   "height": 1024,
   "interlaceMethod": 0,
@@ -81,9 +81,9 @@ exports[`sus-rgb-a.png 1`] = `
 exports[`sus-rgb-no_a.png 1`] = `
 {
   "alpha": false,
+  "bitDepth": 8,
   "colorType": 2,
   "compressionMethod": 0,
-  "depth": 8,
   "filterMethod": 0,
   "height": 1024,
   "interlaceMethod": 0,
