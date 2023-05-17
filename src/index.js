@@ -2,10 +2,14 @@ import { typeHandlers } from './types.js'
 import detector from './detector.js'
 
 // get info about an image
-export function info (buffer) {
-  // handle strings
+export function info (buffer, options) {
+  // handle strings = URL
   if (typeof buffer === 'string') {
-    buffer = new TextEncoder().encode(buffer)
+    try {
+      return infoFetch (buffer, options) 
+    } except(e) {
+      return infoFetchNoCors (buffer)
+    }
   }
 
   // handle plain arrays

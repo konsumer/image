@@ -50,11 +50,15 @@ There are 3 exported functions:
 - `infoFetch(url)` - asynchronous, calls fetch to download very little data, and gets info. [Here](https://codesandbox.io/p/sandbox/mutable-pine-4403q5) is a server-side demo, and [here](https://codepen.io/konsumer/pen/gOBBYgP?editors=1000) is browser-demo.
 - `infoFetchNoCors(url)` - asynchronous, Similar to `infoFetch`, but only for browser. It will get less info, and only supports images that your browser supports, but it can get height/width even when CORS would stop you. [Here](https://codepen.io/konsumer/pen/oNaazaP?editors=1000) is an example usage.
 
+
+> **Note**: You only really need `info(url)`, because it detects a URL (string param) and will try to call  `infoFetch(url)`/`infoFetchNoCors(url)`.
+
+
 ### current nodejs / bun
 
 ```js
-import { infoFetch } from '@konsumer/image'
-console.log(await infoFetch('https://placekitten.com/200/200'))
+import { info } from '@konsumer/image'
+console.log(await info('https://placekitten.com/200/200'))
 ```
 
 You can see a demo [here](https://codesandbox.io/p/sandbox/mutable-pine-4403q5).
@@ -63,8 +67,8 @@ You can see a demo [here](https://codesandbox.io/p/sandbox/mutable-pine-4403q5).
 ### deno
 
 ```js
-import { infoFetch } from 'npm:@konsumer/image'
-console.log(await infoFetch('https://placekitten.com/200/200'))
+import { info } from 'npm:@konsumer/image'
+console.log(await info('https://placekitten.com/200/200'))
 ```
 
 ### older nodejs
@@ -75,7 +79,7 @@ const imagemeta = require('@konsumer/image')
 // if your node doesn't have fetch
 global.fetch = require('node-fetch')
 
-imagemeta.infoFetch('https://placekitten.com/200/200')
+imagemeta.info('https://placekitten.com/200/200')
   .then(info => console.log(info))
 ```
 
@@ -83,8 +87,8 @@ imagemeta.infoFetch('https://placekitten.com/200/200')
 
 ```html
 <script type=module>
-import { infoFetch } from 'https://cdn.skypack.dev/@konsumer/image'
-console.log(await infoFetch('https://placekitten.com/200/200'))
+import { info } from 'https://cdn.skypack.dev/@konsumer/image'
+console.log(await info('https://placekitten.com/200/200'))
 </script>
 ```
 
@@ -95,7 +99,6 @@ You can see a demo [here](https://codepen.io/konsumer/pen/gOBBYgP?editors=1000).
 - I need to clean up & normalize the data, and get more info about every format.
 - Make a top-level `DataView` and use it for everything (similar to Buffer, no buffer utils needed.) See jpeg for example.
 - Also get mime, url, and filesize (on URLS)
-- Would a single functon be simpler? Use `infoFetch` for string (url, with fallback to `infoFetchNoCors` in browser) and `info` for array-likes
 
 
 ## Thanks
