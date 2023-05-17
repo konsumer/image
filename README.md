@@ -55,6 +55,7 @@ import { infoFetch } from '@konsumer/image'
 console.log(await infoFetch('https://placekitten.com/200/200'))
 ```
 
+You can see a demo [here](https://codesandbox.io/p/sandbox/mutable-pine-4403q5).
 
 
 ### deno
@@ -85,7 +86,7 @@ console.log(await infoFetch('https://placekitten.com/200/200'))
 </script>
 ```
 
-You can see an example [here](https://codepen.io/konsumer/pen/gOBBYgP?editors=1000).
+You can see a demo [here](https://codepen.io/konsumer/pen/gOBBYgP?editors=1000).
 
 ## TODO
 
