@@ -44,10 +44,11 @@ npm i @konsumer/image
 
 ## Usage
 
-There are 2 exported functions:
+There are 3 exported functions:
 
-- `infoFetch(url)` - asynchronous, calls fetch to download very little data, and gets info
 - `info(bytes)` - synchronous, use bytes to get as much info as possible
+- `infoFetch(url)` - asynchronous, calls fetch to download very little data, and gets info
+- `infoFetchNoCors(url)` - asynchronous, Similar to `infoFetch`, but only for browser. It will get less info, and only supports images that your browser supports, but it can get height/width even when CORS would stop you. [Here]() is an example usage.
 
 ### current nodejs / bun
 
@@ -93,9 +94,11 @@ You can see a demo [here](https://codepen.io/konsumer/pen/gOBBYgP?editors=1000).
 
 - I need to clean up & normalize the data, and get more info about every format.
 - Make a top-level `DataView` and use it for everything (similar to Buffer, no buffer utils needed.) See jpeg for example.
+- Also get mime, url, and filesize (on URLS)
+- Would a single functon be simpler? Use `infoFetch` for string (url) and `info` for array-likes
 
 
 ## Thanks
 
-- I got a lot of the byte-parsing from [image-size](https://github.com/image-size/image-size)
+- I got a lot of the image byte-parsing stuff from [image-size](https://github.com/image-size/image-size)
 - [jpeg-header](https://viereck.ch/jpeg-header/) seemed to be the most reliable JPEG parsing I have found, in JS.

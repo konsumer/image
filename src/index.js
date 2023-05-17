@@ -29,4 +29,39 @@ export async function infoFetch (url, options) {
   return info(value)
 }
 
+// get size-info about a remote image from an image tag (browser-only)
+async function infoFetchNoCors (url) {
+  return new Promise((resolve, reject) => {
+    let image
+    if (url instanceof Image) {
+      image = url
+      if (image.complete) {
+        return resolve({
+          width: image.naturalWidth,
+          height: image.naturalHeight,
+          url: image.src
+        })
+      }
+    } else {
+      image = new Image()
+      image.src = url
+    }
+
+    image.addEventListener('load', () => {
+      resolve({
+        width: image.naturalWidth,
+        height: image.naturalHeight,
+        url: image.src
+      })
+    })
+
+    image.addEventListener('error', (event) => {
+      const e = new Error('The image failed to load.')
+      e.url = url
+      e.event = event
+      reject(e)
+    })
+  })
+}
+
 export default info
