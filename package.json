@@ -1,6 +1,6 @@
 {
   "name": "@konsumer/image",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Use the minimum amount of data to get info about an image",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -40,7 +40,9 @@
     "esbuild": "^0.17.19",
     "vitest": "^0.31.0"
   },
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "publishConfig": {
     "access": "public"
   }
