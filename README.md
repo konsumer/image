@@ -51,7 +51,7 @@ There are 3 exported functions:
 - `infoFetchNoCors(url)` - asynchronous, Similar to `infoFetch`, but only for browser. It will get less info, and only supports images that your browser supports, but it can get height/width even when CORS would stop you. [Here](https://codepen.io/konsumer/pen/oNaazaP?editors=1000) is an example usage.
 
 
-> **Note**: You only really need `info(url)`, because it detects a URL (string param) and will try to call  `infoFetch(url)`/`infoFetchNoCors(url)`.
+> **Note**: You only really need `info(url)`, and it's the default export, because it detects a URL (string param) and will try to call  `infoFetch(url)` / `infoFetchNoCors(url)`.
 
 
 ### current nodejs / bun
