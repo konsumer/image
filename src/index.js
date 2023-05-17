@@ -6,9 +6,9 @@ export function info (buffer, options) {
   // handle strings = URL
   if (typeof buffer === 'string') {
     try {
-      return infoFetch (buffer, options) 
-    } except(e) {
-      return infoFetchNoCors (buffer)
+      return infoFetch(buffer, options)
+    } catch (e) {
+      return infoFetchNoCors(buffer)
     }
   }
 
