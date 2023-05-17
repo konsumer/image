@@ -24,9 +24,10 @@ These image-types are supported:
 
 ## Features
 
+
 - You are not locked into nodejs or the browser or anyhting. This can be used in many environments (node, browser, deno, bun, Cloudflare workers, etc.)
 - Grabs the smallest amount of bytes from an image as possible, and get the most info possible. This means it's fast, light, and doesn't take a lot of RAM. 1 byte is enough to basically detect format. 20 bytes is enough to get height/width, color information, and more.
-- It will progressively load more data, if it gets more bytes. Example: without access to the header + `tRNS` chunk in an indexed PNG, it cannot fully detect if it has an alpha channel, but other fields will be available, even without the whole file loaded, and even 100 bytes or so is enough to fully detect alpha-channel.
+- No external dependencies. Just add the single file to your project and use it.
 - It works with all kinds of things, like `Buffer`, `ArrayBuffer`, `Uint8Array`, a plain string or array of integers.
 - Use it with `fetch` or your favorite HTTP library.
 
@@ -53,6 +54,8 @@ There are 2 exported functions:
 import { infoFetch } from '@konsumer/image'
 console.log(await infoFetch('https://placekitten.com/200/200'))
 ```
+
+
 
 ### deno
 

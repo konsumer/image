@@ -40,10 +40,7 @@
     "esbuild": "^0.17.19",
     "vitest": "^0.31.0"
   },
-  "files": [
-    "dist/index.cjs",
-    "dist/index.mjs"
-  ],
+  "files": ["dist/*"],
   "publishConfig": {
     "access": "public"
   }
