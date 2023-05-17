@@ -30,7 +30,7 @@ export async function infoFetch (url, options) {
 }
 
 // get size-info about a remote image from an image tag (browser-only)
-async function infoFetchNoCors (url) {
+export async function infoFetchNoCors (url) {
   return new Promise((resolve, reject) => {
     let image
     if (url instanceof Image) {
