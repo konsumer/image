@@ -39,8 +39,5 @@
   "files": [
     "dist/index.cjs",
     "dist/index.mjs"
-  ],
-  "dependencies": {
-    "jpeg-js": "^0.4.4"
-  }
+  ]
 }

@@ -91,3 +91,4 @@ console.log(await infoFetch('https://placekitten.com/200/200'))
 ## Thanks
 
 - I got a lot of the byte-parsing from [image-size](https://github.com/image-size/image-size)
+- [jpeg-header](https://viereck.ch/jpeg-header/) seemed to be the most reliable JPEG parsing I have found.
