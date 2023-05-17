@@ -1,6 +1,6 @@
 {
   "name": "@konsumer/image",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Use the minimum amount of data to get info about an image",
   "type": "module",
   "main": "./dist/index.cjs",
