@@ -46,7 +46,7 @@ npm i @konsumer/image
 
 There are 3 exported functions:
 
-- `info(bytes)` - synchronous, use bytes to get as much info as possible. [Here](https://codesandbox.io/p/sandbox/mutable-pine-4403q5) is a server-0side example that uses it, but it also works in the browser.
+- `info(bytes)` - synchronous, use bytes to get as much info as possible. [Here](https://codesandbox.io/p/sandbox/mutable-pine-4403q5) is a server-side example that uses it, but it also works in the browser.
 - `infoFetch(url)` - asynchronous, calls fetch to download very little data, and gets info. [Here](https://codesandbox.io/p/sandbox/mutable-pine-4403q5) is a server-side demo, and [here](https://codepen.io/konsumer/pen/gOBBYgP?editors=1000) is browser-demo.
 - `infoFetchNoCors(url)` - asynchronous, Similar to `infoFetch`, but only for browser. It will get less info, and only supports images that your browser supports, but it can get height/width even when CORS would stop you. [Here](https://codepen.io/konsumer/pen/oNaazaP?editors=1000) is an example usage.
 
