@@ -57,8 +57,8 @@ There are 3 exported functions:
 ### current nodejs / bun
 
 ```js
-import { info } from '@konsumer/image'
-console.log(await info('https://placekitten.com/200/200'))
+import imagemeta from '@konsumer/image'
+console.log(await imagemeta('https://placekitten.com/200/200'))
 ```
 
 You can see a demo [here](https://codesandbox.io/p/sandbox/mutable-pine-4403q5).
@@ -67,8 +67,8 @@ You can see a demo [here](https://codesandbox.io/p/sandbox/mutable-pine-4403q5).
 ### deno
 
 ```js
-import { info } from 'npm:@konsumer/image'
-console.log(await info('https://placekitten.com/200/200'))
+import imagemeta from 'npm:@konsumer/image'
+console.log(await imagemeta('https://placekitten.com/200/200'))
 ```
 
 ### older nodejs
@@ -79,16 +79,16 @@ const imagemeta = require('@konsumer/image')
 // if your node doesn't have fetch
 global.fetch = require('node-fetch')
 
-imagemeta.info('https://placekitten.com/200/200')
-  .then(info => console.log(info))
+imagemeta('https://placekitten.com/200/200')
+  .then(console.log)
 ```
 
 ### browser-only
 
 ```html
 <script type=module>
-import { info } from 'https://cdn.skypack.dev/@konsumer/image'
-console.log(await info('https://placekitten.com/200/200'))
+import imagemeta from 'https://cdn.skypack.dev/@konsumer/image'
+console.log(await imagemeta('https://placekitten.com/200/200'))
 </script>
 ```
 
