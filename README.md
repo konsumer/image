@@ -95,7 +95,7 @@ You can see a demo [here](https://codepen.io/konsumer/pen/gOBBYgP?editors=1000).
 - I need to clean up & normalize the data, and get more info about every format.
 - Make a top-level `DataView` and use it for everything (similar to Buffer, no buffer utils needed.) See jpeg for example.
 - Also get mime, url, and filesize (on URLS)
-- Would a single functon be simpler? Use `infoFetch` for string (url) and `info` for array-likes
+- Would a single functon be simpler? Use `infoFetch` for string (url, with fallback to `infoFetchNoCors` in browser) and `info` for array-likes
 
 
 ## Thanks
