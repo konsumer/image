@@ -1,0 +1,46 @@
+{
+  "name": "imagemeta",
+  "version": "0.0.0",
+  "description": "Use the minimum amount of data to get info about an image",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "sideEffects": false,
+  "scripts": {
+    "test": "vitest run --globals --reporter verbose",
+    "test:watch": "vitest --globals --ui",
+    "build": "esbuild src/index.js --bundle --format=cjs --outfile=dist/index.cjs && esbuild src/index.js --format=esm --bundle --outfile=dist/index.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "image",
+    "info",
+    "dimensions",
+    "format",
+    "meta",
+    "browser",
+    "native",
+    "worker"
+  ],
+  "author": "David Konsumer <konsumer@jetboystudio.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konsumer/imagemeta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/konsumer/imagemeta/issues"
+  },
+  "homepage": "https://github.com/konsumer/imagemeta#readme",
+  "devDependencies": {
+    "esbuild": "^0.17.19",
+    "vitest": "^0.31.0"
+  },
+  "files": [
+    "dist/index.cjs",
+    "dist/index.mjs"
+  ],
+  "dependencies": {
+    "jpeg-js": "^0.4.4"
+  }
+}
