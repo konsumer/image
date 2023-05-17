@@ -19,6 +19,21 @@ export const readUInt32LE = (offset) => {
             (this[offset + 3] * 0x1000000)
 }
 
+export function readInt16LE (buffer, offset) {
+  offset = offset >>> 0
+  const val = buffer[offset] | (buffer[offset + 1] << 8)
+  return (val & 0x8000) ? val | 0xFFFF0000 : val
+}
+
 export const readUInt8 = (buffer, offset) => buffer[offset >>> 0]
+
+export function readUInt (buffer, bits, offset, isBigEndian) {
+  offset = offset || 0
+  const endian = isBigEndian ? 'BE' : 'LE'
+  const methodName = ('readUInt' + bits + endian)
+  console.log(methodName)
+  return 0
+  // return buffer[methodName].call(buffer, offset)
+}
 
 export const toString = (buf, start, end) => String.fromCharCode(...buf.slice(start, end))
