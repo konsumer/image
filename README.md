@@ -1,4 +1,4 @@
-# imagemeta
+# image
 
 Use the minimum amount of data to get info about an image.
 
@@ -36,7 +36,7 @@ These image-types are supported:
 ### nodejs / build-system
 
 ```sh
-npm i imagemeta
+npm i @konsumer/image
 ```
 
 
@@ -50,22 +50,21 @@ There are 2 exported functions:
 ### current nodejs / bun
 
 ```js
-import { infoFetch } from 'imagemeta'
+import { infoFetch } from '@konsumer/image'
 console.log(await infoFetch('https://placekitten.com/200/200'))
 ```
 
 ### deno
 
 ```js
-import { infoFetch } from 'npm:imagemeta'
+import { infoFetch } from 'npm:@konsumer/image'
 console.log(await infoFetch('https://placekitten.com/200/200'))
 ```
 
 ### older nodejs
 
 ```js
-
-const imagemeta = require('imagemeta')
+const imagemeta = require('@konsumer/image')
 
 // if your node doesn't have fetch
 global.fetch = require('node-fetch')
@@ -78,7 +77,7 @@ imagemeta.infoFetch('https://placekitten.com/200/200')
 
 ```html
 <script type=module>
-import { infoFetch } from 'https://cdn.skypack.dev/imagemeta'
+import { infoFetch } from 'https://cdn.skypack.dev/@konsumer/image'
 console.log(await infoFetch('https://placekitten.com/200/200'))
 </script>
 ```
@@ -91,4 +90,4 @@ console.log(await infoFetch('https://placekitten.com/200/200'))
 ## Thanks
 
 - I got a lot of the byte-parsing from [image-size](https://github.com/image-size/image-size)
-- [jpeg-header](https://viereck.ch/jpeg-header/) seemed to be the most reliable JPEG parsing I have found.
+- [jpeg-header](https://viereck.ch/jpeg-header/) seemed to be the most reliable JPEG parsing I have found, in JS.

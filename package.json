@@ -1,6 +1,6 @@
 {
-  "name": "imagemeta",
-  "version": "0.0.1",
+  "name": "@konsumer/image",
+  "version": "0.0.0",
   "description": "Use the minimum amount of data to get info about an image",
   "type": "module",
   "main": "dist/index.cjs",
@@ -26,12 +26,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/konsumer/imagemeta.git"
+    "url": "git+https://github.com/konsumer/image.git"
   },
   "bugs": {
-    "url": "https://github.com/konsumer/imagemeta/issues"
+    "url": "https://github.com/konsumer/image/issues"
   },
-  "homepage": "https://github.com/konsumer/imagemeta#readme",
+  "homepage": "https://github.com/konsumer/image#readme",
   "devDependencies": {
     "esbuild": "^0.17.19",
     "vitest": "^0.31.0"
@@ -39,5 +39,8 @@
   "files": [
     "dist/index.cjs",
     "dist/index.mjs"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
