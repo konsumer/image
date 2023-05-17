@@ -48,16 +48,16 @@ export const PNG = {
   calculate (buffer) {
     const chunks = getPNGChunks(buffer, toString(buffer, 12, 16) === pngFriedChunkName ? 24 : 8)
     const ihdr = chunks[0].data
-
-    const out = {}
-    out.width = readUInt32BE(ihdr, 0)
-    out.height = readUInt32BE(ihdr, 4)
-    out.bitDepth = readUInt8(ihdr, 8)
-    out.colorType = readUInt8(ihdr, 9)
-    out.compressionMethod = readUInt8(ihdr, 10)
-    out.filterMethod = readUInt8(ihdr, 11)
-    out.interlaceMethod = readUInt8(ihdr, 12)
-    out.alpha = ((out.colorType & 4) === 4) || !!chunks.find(c => c.type === 'tRNS')
-    return out
+    const colorType = readUInt8(ihdr, 9)
+    return {
+      width: readUInt32BE(ihdr, 0),
+      height: readUInt32BE(ihdr, 4),
+      bitDepth: readUInt8(ihdr, 8),
+      colorType,
+      compressionMethod: readUInt8(ihdr, 10),
+      filterMethod: readUInt8(ihdr, 11),
+      interlaceMethod: readUInt8(ihdr, 12),
+      alpha: ((colorType & 4) === 4) || !!chunks.find(c => c.type === 'tRNS')
+    }
   }
 }
